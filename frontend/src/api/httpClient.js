@@ -10,15 +10,17 @@ const httpClient = axios.create({
   responseType: 'json',
   responseEncoding: 'utf8',
   headers: {
-    'Content-Type': 'application/json; charset=UTF-8',
     'X-Requested-With': 'XMLHttpRequest',
     post: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    delete: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+    get: {
+      'Content-Type': 'application/json; charset=UTF-8',
     },
     put: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    delete: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
   },

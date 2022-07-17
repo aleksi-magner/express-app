@@ -21,12 +21,8 @@ const paramsToFormData = params => {
 
 /**
  * Создаёт новый пост.
- * @param {object} data
- * @param {string} data.author - required
- * @param {string} data.title - required
- * @param {string} data.content - required
- * @param {file} data.picture - optional
- * @return {object}
+ * @param {{author: string, title: string, content: string, [picture]: file}} data
+ * @return {Promise<object>}
  */
 export const createPost = async data => {
   try {
@@ -44,13 +40,10 @@ export const createPost = async data => {
 
 /**
  * Получает список постов.
- * @param {object} query
- * @param {string} query.author
- * @param {string} query.title
- * @param {string} query.content
- * @return {array}
+ * @param {{author: string, title: string, content: string}} [query={}]
+ * @return {Promise<object[]>}
  */
-export const fetchPosts = async query => {
+export const fetchPosts = async (query = {}) => {
   try {
     const response = await httpClient.get(`${baseURL}/`, {
       params: query,
@@ -67,7 +60,7 @@ export const fetchPosts = async query => {
 /**
  * Получает пост по ID.
  * @param {string} ID
- * @return {object}
+ * @return {Promise<object>}
  */
 export const fetchPostByID = async ID => {
   try {
@@ -83,13 +76,8 @@ export const fetchPostByID = async ID => {
 
 /**
  * Обновляет текущий пост.
- * @param {object} data
- * @param {string} data.id - required
- * @param {string} data.author
- * @param {string} data.title
- * @param {string} data.content
- * @param {file} data.picture
- * @return {object}
+ * @param {{id: string, [author]: string, [title]: string, [content]: string, [picture]: file}} data
+ * @return {Promise<object>}
  */
 export const updatePost = async data => {
   try {
@@ -108,7 +96,6 @@ export const updatePost = async data => {
 /**
  * Удаляет пост по ID.
  * @param {string} ID
- * @return {object}
  */
 export const removePost = async ID => {
   try {

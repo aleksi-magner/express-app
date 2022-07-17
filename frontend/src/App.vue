@@ -13,9 +13,40 @@
 </template>
 
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { createPost, fetchPosts, fetchPostByID, updatePost, removePost } from '@/api/posts.js';
+
 import HelloWorld from '@/components/HelloWorld.vue';
+
+console.log('Backend', import.meta.env.VITE_BACKEND);
+
+const newPost = await createPost({
+  author: 'magner',
+  title: 'Post title',
+  content: 'Any post content',
+});
+
+console.log('Added post', newPost);
+
+const posts = await fetchPosts();
+
+console.log('Posts list', posts);
+
+const postID = newPost?.id || null;
+
+if (postID) {
+  const post = await fetchPostByID(postID);
+
+  console.log('Post by ID', post);
+
+  const updatedPost = await updatePost({
+    id: postID,
+    author: 'Aleksey Magner',
+  });
+
+  console.log('Updated post', updatedPost);
+
+  await removePost(postID);
+}
 </script>
 
 <style scoped>

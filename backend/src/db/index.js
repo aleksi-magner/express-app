@@ -4,7 +4,7 @@ import { defaultConfig } from '#root/dictionaries.js';
 
 const db = new AceBase('local_db', {
   storage: {
-    path: './db',
+    path: './src/db/',
   },
   logLevel: 'warn', // 'verbose', 'log' (default), 'warn' and 'error' (only errors are logged)
 });
