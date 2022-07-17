@@ -1,0 +1,82 @@
+### CreatePost
+POST http://{{host}}:{{port}}/{{api_posts}}/
+Content-Type: application/json
+
+{
+  "author": "magner",
+  "title": "Post title",
+  "content":  "Any post content"
+}
+
+### CreatePostWithFile
+POST http://{{host}}:{{port}}/{{api_posts}}/
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="author"
+
+magner
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="title"
+
+Post title
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="content"
+
+Any post content
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="picture"; filename="kotofey-foto-na-pasport-kot.jpg"
+
+< ./kotofey-foto-na-pasport-kot.jpg
+--WebAppBoundary--
+
+### GetAllPosts
+GET http://{{host}}:{{port}}/{{api_posts}}/
+Accept: application/json
+
+### GetPostByID
+GET http://{{host}}:{{port}}/{{api_posts}}/l5p6jote00013mt739vb1c3v/
+Accept: application/json
+
+### UpdatePost
+PUT http://{{host}}:{{port}}/{{api_posts}}/
+Content-Type: application/json
+
+{
+  "id": "l5p6jote00013mt739vb1c3v",
+  "author": "Aleksey"
+}
+
+### UpdatePostWithFile
+PUT http://{{host}}:{{port}}/{{api_posts}}/
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="id"
+
+l5p6jote00013mt739vb1c3v
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="author"
+
+Aleksey Magner
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="picture"; filename="kotofey-foto-na-pasport-kot.jpg"
+
+< ./kotofey-foto-na-pasport-kot.jpg
+--WebAppBoundary--
+
+### RemovePost
+DELETE http://{{host}}:{{port}}/{{api_posts}}/l5p6jote00013mt739vb1c3v/
+Content-Type: application/json
+
+###
