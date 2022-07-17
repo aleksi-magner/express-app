@@ -1,15 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "serve": "nodemon index.js"
+    "serve": "nodemon main.js"
   },
   "imports": {
-    "#root/*" : "./*",
+    "#root/*": "./*",
     "#db": "./db/index.js",
     "#endpoints/*": "./endpoints/*"
   },

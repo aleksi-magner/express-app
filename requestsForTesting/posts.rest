@@ -41,7 +41,7 @@ GET http://{{host}}:{{port}}/{{api_posts}}/
 Accept: application/json
 
 ### GetPostByID
-GET http://{{host}}:{{port}}/{{api_posts}}/l5p6jote00013mt739vb1c3v/
+GET http://{{host}}:{{port}}/{{api_posts}}/l5pdbeqm0001bht7zsvw4trq/
 Accept: application/json
 
 ### UpdatePost

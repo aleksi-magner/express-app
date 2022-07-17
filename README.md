@@ -1,6 +1,11 @@
-# express-app
+# Desktop application on Electron, Express and Vue
+
 Fullstack application with local noSQL DB. Express, AceBase, Vue, Vite
 
+* `Express` - backend фреймворк для обмена данными с клиентом и работой с БД
+* `AceBase` - локальная база данных noSQL с хранением данных в файле внутри проекта
+* `Vue` - frontend фреймворк для создания клиентской части приложения
+* `Vite` - сборщик frontend приложения
 
 ## Backend packages
 
