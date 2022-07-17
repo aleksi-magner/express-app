@@ -8,9 +8,9 @@
     "serve": "nodemon main.js"
   },
   "imports": {
-    "#root/*": "./*",
-    "#db": "./db/index.js",
-    "#endpoints/*": "./endpoints/*"
+    "#root/*": "./src/*",
+    "#db": "./src/db/index.js",
+    "#endpoints/*": "./src/endpoints/*"
   },
   "dependencies": {
     "acebase": "^1.21.7",

@@ -36,7 +36,7 @@ class Controller {
 
       if (invalidFields.length) {
         response.status(400).json({
-          message: messageCodes.invalid_required_fields,
+          detail: messageCodes.invalid_required_fields,
           field_errors: invalidFields,
         });
 
@@ -96,7 +96,7 @@ class Controller {
 
       if (!id) {
         response.status(400).json({
-          message: messageCodes.no_id,
+          detail: messageCodes.no_id,
         });
 
         return;
@@ -106,7 +106,7 @@ class Controller {
 
       if (!Object.keys(result).length) {
         response.status(400).json({
-          message: messageCodes.object_with_id_not_found,
+          detail: messageCodes.object_with_id_not_found,
         });
 
         return;
@@ -133,7 +133,7 @@ class Controller {
     try {
       if (!request.body?.id) {
         response.status(400).json({
-          message: messageCodes.no_id,
+          detail: messageCodes.no_id,
         });
 
         return;
@@ -150,7 +150,7 @@ class Controller {
 
       if (!Object.keys(result).length) {
         response.status(400).json({
-          message: messageCodes.object_with_id_not_found,
+          detail: messageCodes.object_with_id_not_found,
         });
 
         return;
@@ -179,7 +179,7 @@ class Controller {
 
       if (!id) {
         response.status(400).json({
-          message: messageCodes.no_id,
+          detail: messageCodes.no_id,
         });
 
         return;
@@ -191,7 +191,7 @@ class Controller {
 
       if (!done) {
         response.status(400).json({
-          message: messageCodes.object_with_id_not_found,
+          detail: messageCodes.object_with_id_not_found,
         });
 
         return;

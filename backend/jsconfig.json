@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#root/*" : ["./*"],
-      "#db" : ["./db/index.js"],
-      "#endpoints/*" : ["./endpoints/*"]
+      "#root/*" : ["./src/*"],
+      "#db" : ["./src/db/index.js"],
+      "#endpoints/*" : ["./src/endpoints/*"]
     }
   }
 }

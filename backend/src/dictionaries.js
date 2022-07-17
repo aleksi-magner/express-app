@@ -1,6 +1,6 @@
 export const defaultConfig = {
   port: 8000,
-  static: 'static',
+  static: '../static',
   imageField: 'picture',
   results_limit: 1000,
 };
