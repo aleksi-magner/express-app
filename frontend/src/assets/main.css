@@ -1,0 +1,10 @@
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/layouts.css';
+@import './styles/typography.css';
+@import './styles/loader.css';
+@import './styles/form-controls.css';
+@import './styles/buttons.css';
+@import './styles/modal.css';
+@import './styles/fullscreen-modal.css';
+@import './styles/transition.css';

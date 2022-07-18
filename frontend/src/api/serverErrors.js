@@ -7,9 +7,7 @@ const serverErrors = (error, alternativeText = 'Произошла ошибка'
     $error(data.detail);
   } else if (data?.field_errors) {
     if (Array.isArray(data.field_errors)) {
-      data.field_errors.map(err => {
-        $error(err);
-      });
+      data.field_errors.map($error);
     } else {
       $error(data.field_errors);
     }

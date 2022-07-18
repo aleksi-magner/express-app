@@ -1,0 +1,70 @@
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-property: opacity, height;
+  transition-duration: 0.13s;
+  transition-timing-function: var(--timing-function);
+  overflow: hidden;
+}
+
+.move-left-leave-to,
+.move-right-enter-from {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.move-left-enter-from,
+.move-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+
+.move-left-enter-active,
+.move-left-leave-active,
+.move-right-enter-active,
+.move-right-leave-active {
+  backface-visibility: hidden;
+  transition-property: transform;
+  transition-duration: 0.13s;
+  transition-timing-function: var(--timing-function);
+}
+
+.unfold-enter-from,
+.unfold-leave-to,
+.unfold-top-enter-from,
+.unfold-top-leave-to,
+.unfold-bottom-enter-from,
+.unfold-bottom-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.unfold-enter-active,
+.unfold-leave-active,
+.unfold-top-enter-active,
+.unfold-top-leave-active,
+.unfold-bottom-enter-active,
+.unfold-bottom-leave-active {
+  backface-visibility: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 0.15s;
+  transition-timing-function: var(--timing-function);
+  overflow: hidden;
+}
+
+.unfold-enter-active,
+.unfold-leave-active {
+  transform-origin: center center;
+}
+
+.unfold-top-enter-active,
+.unfold-top-leave-active {
+  transform-origin: center top;
+}
+
+.unfold-bottom-enter-active,
+.unfold-bottom-leave-active {
+  transform-origin: center bottom;
+}

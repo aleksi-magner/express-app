@@ -1,4 +1,4 @@
-# Desktop application on Electron, Express and Vue
+# Desktop application on Express and Vue
 
 Fullstack application with local noSQL DB. Express, AceBase, Vue, Vite
 
@@ -7,7 +7,8 @@ Fullstack application with local noSQL DB. Express, AceBase, Vue, Vite
 * `Vue` - frontend фреймворк для создания клиентской части приложения
 * `Vite` - сборщик frontend приложения
 
-## Backend packages
+<details>
+  <summary>Backend packages (click to list open/close)</summary>
 
 * `express` - backend фреймворк
 * `nodemon` - для локальной перезагрузки сервера при внесении изменений
@@ -16,3 +17,5 @@ Fullstack application with local noSQL DB. Express, AceBase, Vue, Vite
 * `express-fileupload` - для работы с загружаемыми с клиента файлами
 * `uuid` - для генерирования уникальных id
 * `path` - работа с путями к файлам и каталогам
+
+</details>

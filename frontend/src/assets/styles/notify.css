@@ -1,0 +1,31 @@
+.notify {
+  color: var(--base);
+  border-radius: var(--border-radius);
+  background-color: var(--border-color);
+  box-shadow: var(--box-shadow);
+  transition-timing-function: var(--timing-function);
+}
+
+.notify--success {
+  color: var(--white);
+  background-color: var(--success);
+}
+
+.notify--info {
+  color: var(--white);
+  background-color: var(--info);
+}
+
+.notify--warning {
+  color: var(--white);
+  background-color: var(--warning);
+}
+
+[data-theme='dark'] .notify--warning {
+  color: var(--bg);
+}
+
+.notify--error {
+  color: var(--white);
+  background-color: var(--error);
+}

@@ -1,0 +1,89 @@
+.app-button {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-self: flex-start;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 12px;
+  min-width: 50px;
+  height: 28px;
+  font-family: inherit;
+  font-size: 0.925rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: normal;
+  text-indent: 0;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: var(--primary);
+  caret-color: currentColor;
+  outline: none;
+  border-radius: var(--border-radius);
+  border: thin solid var(--border-color);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  transition-duration: 0.28s;
+  transition-property: opacity;
+  transition-timing-function: var(--timing-function);
+  user-select: none;
+  -webkit-appearance: button;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.app-button--loading > .app-button__content {
+  visibility: hidden;
+}
+
+.app-button:focus {
+  outline: none;
+}
+
+.app-button:disabled,
+.app-button--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: var(--muted);
+  background-color: var(--border-color);
+}
+
+/* Loader */
+.app-button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  color: inherit;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  backface-visibility: hidden;
+  transform: translate3d(-50%, -50%, 0);
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  visibility: hidden;
+}
+
+.app-button--loading:before {
+  animation-name: rotate;
+  visibility: visible;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
